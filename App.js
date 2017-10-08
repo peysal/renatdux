@@ -12,6 +12,7 @@ import {
   View
 } from 'react-native';
 import { Provider } from 'react-redux';
+import rootStore from './store/root.js'
 
 
 const instructions = Platform.select({
@@ -24,7 +25,7 @@ const instructions = Platform.select({
 export default class App extends Component<{}> {
   render() {
     return (
-      <Provider store={}>
+      <Provider store={rootStore}>
         <View style={styles.container}>
           <Text style={styles.welcome}>
             Welcome to React Native!
