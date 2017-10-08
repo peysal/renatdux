@@ -2,6 +2,6 @@ import {createStore} from 'redux'
 
 export const rootState = () => {}
 
-let root = createStore(rootState);
+let rootStore = createStore(rootState);
 
-export default root;
+export default rootStore;
