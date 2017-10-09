@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
+import HomeView from '../view/HomeView.js';
 
 const mapStateToProps = rootState => ({
-
+    homeState:rootState
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -11,4 +12,4 @@ const mapDispatchToProps = (dispatch) => ({
     action2:() => {dispatch({ type: 'action2'})}
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)()
+export default connect(mapStateToProps, mapDispatchToProps)(HomeView)
