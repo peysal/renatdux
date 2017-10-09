@@ -12,7 +12,8 @@ import {
   View
 } from 'react-native';
 import { Provider } from 'react-redux';
-import rootStore from './store/root.js'
+import rootStore from './store/root.js';
+import HomeContainer from './containers/HomeContainer.js';
 
 
 const instructions = Platform.select({
@@ -26,7 +27,7 @@ export default class App extends Component<{}> {
   render() {
     return (
       <Provider store={rootStore}>
-        
+        <HomeContainer />
       </Provider>
     );
   }
