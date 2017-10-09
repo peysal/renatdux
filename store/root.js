@@ -1,6 +1,6 @@
 import {createStore} from 'redux'
 
-export const rootState = (state, action) => {
+export const rootState = (state = 'i am default', action) => {
     switch (action.type) {
         case 'action1': 
             return 'yo action1';
