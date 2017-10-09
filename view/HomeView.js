@@ -38,7 +38,7 @@ export default class HomeView extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                Welcome to React Native! with state {this.props.homeState}
+                Welcome to React Native!
                 </Text>
                 <Text style={styles.instructions}>
                 To get started, edit App.js
@@ -46,6 +46,11 @@ export default class HomeView extends Component {
                 <Text style={styles.instructions}>
                 {instructions}
                 </Text>
+                <Text style={styles.instructions}>
+                Current redux state: {this.props.homeState}
+                </Text>
+                <Button title="change state 1" onPress={this.props.action1}/>
+                <Button title="change state 2" onPress={this.props.action2}/>
             </View>
         );
     }
