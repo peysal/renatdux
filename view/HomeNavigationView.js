@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 class HomeScreen extends React.Component {
@@ -7,12 +7,29 @@ class HomeScreen extends React.Component {
         title: 'Welcome'
     }
     render() {
-        return <Text>Hello, Navigation!</Text>
+        const { navigate } = this.props.navigation;
+        return(
+            <View> 
+                <Text>Hello, chat app!</Text> 
+                <Button title="chat with scarlet johansson" 
+                onPress ={()=> navigate('Chat')}/>      
+            </View>
+        );
+    }
+}
+
+class ChatScreen extends React.Component {
+    static navigationOptions = {
+        title: 'Chat with scarlet johansson'
+    }
+    render() {
+        return <Text>Chat</Text>
     }
 }
 
 const HomeNavigation = StackNavigator({
-    Home: { screen: HomeScreen}
+    Home: { screen: HomeScreen},
+    Chat: { screen: ChatScreen}
 });
 
 export default class HomeNavigationView extends React.Component {
