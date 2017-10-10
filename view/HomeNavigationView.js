@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 class HomeScreen extends React.Component {
-    static navigrationOptions = {
+    static navigationOptions = {
         title: 'Welcome'
     }
     render() {
