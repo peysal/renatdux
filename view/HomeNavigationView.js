@@ -12,7 +12,7 @@ class HomeScreen extends React.Component {
             <View> 
                 <Text>Hello, chat app!</Text> 
                 <Button title="chat with scarlet johansson" 
-                onPress ={ () => navigate('Chat', {user: 'scarlet'})}/>      
+                onPress ={ () => navigate('Chat', {user: 'scarlet', pwd: 'ayam'})}/>      
             </View>
         );
     }
@@ -23,10 +23,10 @@ class ChatScreen extends React.Component {
         title:`chat with: ${navigation.state.params.user}`
     });
     render() {
-        const { params } = this.props.navigation.state;
+        const { user, pwd } = this.props.navigation.state.params;
         return (
             <View>
-                <Text>Chat with {params.user}</Text>
+                <Text>Chat with {user} with pwd: {pwd}</Text>
             </View>
         );
     }
