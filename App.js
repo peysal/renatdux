@@ -14,9 +14,9 @@ import TabNavigationView from './view/TabNavigationView.js';
 export default class App extends Component<{}> {
   render() {
     return (
-      <Provider store={rootStore}>
-        <TabNavigationView />
-      </Provider>
+
+        <HomeNavigationView />
+
     );
   }
 }
