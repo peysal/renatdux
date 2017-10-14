@@ -27,4 +27,12 @@ const TabNavigation = TabNavigator({
     All: { screen : AllContactScreen }
 });
 
-export default TabNavigation;
+class TabNavigationView extends React.Component {
+    render() {
+        return (
+            <TabNavigation />
+        )
+    }
+}
+
+export default TabNavigationView;
