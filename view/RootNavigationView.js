@@ -34,22 +34,6 @@ const TabNavigation = TabNavigator({
     All: { screen : AllContactScreen }
 });
 
-class HomeScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Welcome'
-    }
-    render() {
-        const { navigate } = this.props.navigation;
-        return(
-            <View> 
-                <Text>Hello, chat app!</Text> 
-                <Button title="chat with scarlet johansson" 
-                onPress ={ () => navigate('Chat', {user: 'scarlet', pwd: 'ayam'})}/>      
-            </View>
-        );
-    }
-}
-
 class ChatScreen extends React.Component {
     static navigationOptions = ( {navigation} ) => ({
         title:`chat with: ${navigation.state.params.user}`
