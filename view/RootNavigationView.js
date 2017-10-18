@@ -34,6 +34,17 @@ const TabNavigation = TabNavigator({
     All: { screen : AllContactScreen }
 });
 
+class TabNavigatorView extends React.Component {
+    render() {
+        return (
+            <View>
+                <TabNavigation navigation={this.props.navigation}/>
+            </View>
+        );
+    }
+}
+TabNavigatorView.router = TabNavigation.router;
+
 class ChatScreen extends React.Component {
     static navigationOptions = ( {navigation} ) => ({
         title:`chat with: ${navigation.state.params.user}`
