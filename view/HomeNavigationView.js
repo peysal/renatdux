@@ -9,7 +9,7 @@ class RecentChatScreen extends React.Component {
             <View>
                 <Text>List of recent tabs </Text>
                 <Button
-                    onPress={() => this.props.navigation.navigate('Chat', { user: 'scarlet' })}
+                    onPress={() => this.props.navigation.navigate('Chat', { user: 'scarlet', pwd: 'recent 1' })}
                     title="Chat with scarlet"/>
             </View>
         )
@@ -22,7 +22,7 @@ class AllContactScreen extends React.Component {
             <View>
                 <Text>List of all contacts</Text>
                 <Button
-                    onPress={() => this.props.navigation.navigate('Chat', { user: 'scarlet' })}
+                    onPress={() => this.props.navigation.navigate('Chat', { user: 'scarlet', pwd: 'contacts 1' })}
                     title="Chat with scarlet"/>
             </View>
         )
