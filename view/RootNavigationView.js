@@ -64,7 +64,7 @@ class ChatScreen extends React.Component {
     }
 }
 
-const HomeNavigation = StackNavigator({
+const RootNavigation = StackNavigator({
     Home: { 
         screen: TabNavigation,
         navigationOptions: {
@@ -77,7 +77,7 @@ const HomeNavigation = StackNavigator({
 export default class RootNavigationView extends React.Component {
     render() {
         return (    
-            <HomeNavigation />
+            <RootNavigation />
         ) 
     }
 }
