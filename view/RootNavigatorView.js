@@ -1,48 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
-
-class RecentChatScreen extends React.Component {
-    render() {
-        return (
-            <View>
-                <Text>List of recent tabs </Text>
-                <Button
-                    onPress={() => this.props.navigation.navigate('Chat', { user: 'scarlet', pwd: 'recent 1' })}
-                    title="Chat with scarlet"/>
-            </View>
-        )
-    }
-}
-
-class AllContactScreen extends React.Component {
-    render() {
-        return (
-            <View>
-                <Text>List of all contacts</Text>
-                <Button
-                    onPress={() => this.props.navigation.navigate('Chat', { user: 'scarlet', pwd: 'contacts 1' })}
-                    title="Chat with scarlet"/>
-            </View>
-        )
-    }
-}
-
-const TabNavigation = TabNavigator({
-    Recent: { screen : RecentChatScreen},
-    All: { screen : AllContactScreen }
-});
-
-class TabNavigatorView extends React.Component {
-    render() {
-        return (
-            <View>
-                <TabNavigation navigation={this.props.navigation}/>
-            </View>
-        );
-    }
-}
-TabNavigatorView.router = TabNavigation.router;
+import TabNavigatorView from './TabNavigatorView.js';
 
 class ChatScreen extends React.Component {
     static navigationOptions = ( {navigation} ) => ({
@@ -60,7 +19,7 @@ class ChatScreen extends React.Component {
 
 const RootNavigator = StackNavigator({
     Home: { 
-        screen: TabNavigation,
+        screen: TabNavigatorView,
         navigationOptions: {
             title: 'My Chats',
           }
