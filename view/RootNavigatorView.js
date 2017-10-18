@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
-
 class RecentChatScreen extends React.Component {
     render() {
         return (
@@ -59,7 +58,7 @@ class ChatScreen extends React.Component {
     }
 }
 
-const RootNavigation = StackNavigator({
+const RootNavigator = StackNavigator({
     Home: { 
         screen: TabNavigation,
         navigationOptions: {
@@ -69,10 +68,10 @@ const RootNavigation = StackNavigator({
     Chat: { screen: ChatScreen}
 });
 
-export default class RootNavigationView extends React.Component {
+export default class RootNavigatorView extends React.Component {
     render() {
         return (    
-            <RootNavigation />
+            <RootNavigator />
         ) 
     }
 }
