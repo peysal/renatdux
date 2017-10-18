@@ -74,7 +74,7 @@ const HomeNavigation = StackNavigator({
     Chat: { screen: ChatScreen}
 });
 
-export default class HomeNavigationView extends React.Component {
+export default class RootNavigationView extends React.Component {
     render() {
         return (    
             <HomeNavigation />
