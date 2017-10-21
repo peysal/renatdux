@@ -4,10 +4,12 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 import TabNavigatorView from './TabNavigatorView.js';
 
 class ChatScreen extends React.Component {
-    static navigationOptions = ( {navigation} ) => ({
-        title:`chat with: ${navigation.state.params.user}`,
-        headerRight: <Button title='info'/>
-    });
+    static navigationOptions = ( {navigation} ) => {
+        return {
+            title:`chat with: ${navigation.state.params.user}`,
+            headerRight: <Button title='info'/>
+        };
+    };
     render() {
         const { user, pwd } = this.props.navigation.state.params;
         return (
