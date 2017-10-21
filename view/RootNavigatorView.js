@@ -5,9 +5,17 @@ import TabNavigatorView from './TabNavigatorView.js';
 
 class ChatScreen extends React.Component {
     static navigationOptions = ( {navigation} ) => {
+        const {state, setParams} = navigation;
+        const isInfo = state.params.mode === 'info';
+        const {user} = state.params;
         return {
-            title:`chat with: ${navigation.state.params.user}`,
-            headerRight: <Button title='info'/>
+            title: isInfo ? `${user}'s Contact Info`: `Chat with ${user}`,
+            headerRight: (
+            <Button 
+            title={ isInfo ? 'Done' : `${user}'s info`}
+            onPress={()=>(setParams({ mode: isInfo ? 'none' : 'info'}))}
+            />
+        )
         };
     };
     render() {
