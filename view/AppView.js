@@ -36,7 +36,7 @@ const drawerNavigator = DrawerNavigator({
     screen: stackNavigator,
     navigationOptions: {
       drawer: {
-        label: 'drawer 1',
+        label: 'FB Login',
       },
     },
   },
