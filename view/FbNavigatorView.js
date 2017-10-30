@@ -12,3 +12,5 @@ const fbStackNavigator = StackNavigator({
     screen: detailScreen,
   },
 });
+
+export default fbStackNavigator;

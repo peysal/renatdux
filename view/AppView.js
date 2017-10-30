@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { DrawerNavigator, TabNavigator, StackNavigator } from 'react-navigation';
+import fbNavigatorView from './FbNavigatorView';
 import mainScreen from '../screens/MainScreen';
 import detailScreen from '../screens/DetailScreen';
 
@@ -33,7 +34,7 @@ const tabNavigator1 = TabNavigator(
 
 const drawerNavigator = DrawerNavigator({
   DrawerItem1: {
-    screen: stackNavigator,
+    screen: fbNavigatorView,
     navigationOptions: {
       drawer: {
         label: 'FB Login',
