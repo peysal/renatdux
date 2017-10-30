@@ -1,41 +1,15 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { DrawerNavigator, TabNavigator, StackNavigator } from 'react-navigation';
-
-class MainScreen extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Hello Main</Text>
-      </View>
-    );
-  }
-}
-
-class DetailScreen extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Hello Detail</Text>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
+import mainScreen from '../screens/MainScreen';
+import detailScreen from '../screens/DetailScreen';
 
 const stackNavigator = StackNavigator({
   Main: {
-    screen: DetailScreen,
+    screen: mainScreen,
   },
   Detail: {
-    screen: DetailScreen,
+    screen: detailScreen,
   },
 });
 
